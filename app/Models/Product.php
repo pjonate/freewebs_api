@@ -4,9 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Product extends Model
+class product extends Model
 {
-    //
-    protected $table = 'product';
+    protected $table = 'product'; // si el nombre no es plural, especifícalo
 
+    protected $primaryKey = 'id'; // si no usas "id" como clave primaria
+
+    protected $fillable = ['nombre', 'precio'];
 }
